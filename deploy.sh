@@ -7,7 +7,7 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     docker tag react-nginx lakshmimadhan/dev
     docker push lakshmimadhan/dev
 
-elif [[ $GIT_BRANCH == "origin/prod" ]]; then
+elif [[ $GIT_BRANCH == "origin/master" ]]; then
     sh 'chmod +x build.sh'
     sh './build.sh'
     docker login -u lakshmimadhan -p $DOCKER_PASSWORD
